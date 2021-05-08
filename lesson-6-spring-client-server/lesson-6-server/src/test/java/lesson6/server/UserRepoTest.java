@@ -1,4 +1,4 @@
-package lesson6.server;
+/*package lesson6.server;
 
 import lesson6.server.model.Account;
 import lesson6.server.model.User;
@@ -50,3 +50,6 @@ public class UserRepoTest {
         Assertions.assertEquals(1, accountRepository.findAllByOwner(users.get(0)).size());
     }
 }
+
+
+ */

@@ -1,10 +1,9 @@
 package lesson6.api.dto;
-
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Null;
 
 @SuppressWarnings("unused")
-public class UserDto {
+public class AdminDto {
     @Null
     private Long id;
     @NotNull
@@ -24,21 +23,20 @@ public class UserDto {
     private String link;
 
 
-
     @NotNull
-    private Long percentOfProfit;
+    private String position;
 
 
-    public UserDto(){}
+    public AdminDto(){}
 
-    public UserDto(Long id, String name,String surname, String login, String password, String link, Long percentOfProfit) {
+    public AdminDto(Long id, String name,String surname, String login, String password, String link, String position) {
         this.id = id;
         this.name = name;
         this.surname = surname;
         this.login = login;
         this.password = password;
         this.link = link;
-        this.percentOfProfit = percentOfProfit;
+        this.position = position;
 
     }
 
@@ -58,13 +56,6 @@ public class UserDto {
         this.name = name;
     }
 
-    public Long getPercentOfProfit() {
-        return percentOfProfit;
-    }
-
-    public void setPercentOfProfit(Long percentOfProfit) {
-        this.percentOfProfit = percentOfProfit;
-    }
     public String getSurname() {
         return surname;
     }
@@ -96,4 +87,13 @@ public class UserDto {
     public void setLink(String link) {
         this.link = link;
     }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
 }
+

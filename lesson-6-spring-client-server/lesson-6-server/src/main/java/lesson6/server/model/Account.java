@@ -12,18 +12,18 @@ import javax.persistence.*;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "accounts")
+@Table(name = "account")
 public class Account {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @ApiModelProperty("account id")
-    private Long id;
+    public Long id;
     @NotNull
     @Column(name = "number", unique = true)
     @ApiModelProperty("unique account number")
-    private String number;
+    public String number;
     @NotNull
     @ManyToOne
     @JoinColumn(name = "owner_id")
-    private User owner;
+    public User owner;
 }

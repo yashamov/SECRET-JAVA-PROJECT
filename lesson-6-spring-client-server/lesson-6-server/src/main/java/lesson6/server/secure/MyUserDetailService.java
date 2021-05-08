@@ -1,3 +1,4 @@
+/*
 package lesson6.server.secure;
 
 import lesson6.server.model.ApiUser;
@@ -27,3 +28,4 @@ public class MyUserDetailService implements UserDetailsService{
         return new User(user.getName(), user.getPasswordHash(), authorities);
     }
 }
+*/

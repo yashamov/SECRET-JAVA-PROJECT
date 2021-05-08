@@ -2,27 +2,27 @@ package lesson6.server.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.annotations.ApiModelProperty;
-import lesson6.api.dto.UserDto;
+import lesson6.api.dto.AdminDto;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.jetbrains.annotations.NotNull;
 
 import javax.persistence.*;
-import java.util.List;
 
 @SqlResultSetMapping(
-        name = "userMapping",
+        name = "adminMapping",
         classes = @ConstructorResult(
-                targetClass = UserDto.class,
+                targetClass = AdminDto.class,
                 columns = {
                         @ColumnResult(name = "id", type=Long.class),
-                        @ColumnResult(name = "username", type=String.class),
+                        @ColumnResult(name = "name", type=String.class),
                         @ColumnResult(name ="surname", type =String.class),
                         @ColumnResult(name ="login", type =String.class),
                         @ColumnResult(name ="password", type =String.class),
                         @ColumnResult(name ="link", type =String.class),
-                        @ColumnResult(name ="percentOfProfit", type =Long.class),
+                        @ColumnResult(name ="position", type =String.class),
 
                 }
         )
@@ -32,27 +32,27 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "users")
-public class User {
+@Table(name = "admins")
+public class Admin {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id")
-    @ApiModelProperty("user id")
+    @ApiModelProperty("admin id")
     public Long id;
 
     @NotNull
     @Column(name = "name", length = 30)
-    @ApiModelProperty("user name")
+    @ApiModelProperty("admin name")
     public String name;
 
     @NotNull
     @Column(name = "surname", length = 30)
-    @ApiModelProperty("user surname")
+    @ApiModelProperty("admin surname")
     public String surname;
 
     @NotNull
     @Column(name = "login", length = 30)
-    @ApiModelProperty("user login")
+    @ApiModelProperty("admin login")
     public String login;
 
 
@@ -60,23 +60,15 @@ public class User {
     @Column(name = "password", length = 30)
     @ApiModelProperty("hash of password")
     @JsonIgnore
-    public String password;
+    public String password_hash;
+
     @NotNull
     @Column(name = "link", length = 30)
-    @ApiModelProperty("hash of password")
-
+    @ApiModelProperty("admin link")
     public String link;
+
     @NotNull
-    @Column(name = "procentofprofit", length = 30)
-    @ApiModelProperty("hash of password")
-    public String percentOfProfit;
-
-    /*@JsonIgnore
-    @OneToMany(mappedBy = "owner")
-    public List<Account> accounts;
-
-    */
-
-
-
+    @Column(name = "position", length = 30)
+    @ApiModelProperty("position")
+    public String position;
 }
