@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+
+        #header{
+            width: 1920px;
+            height: 100px;
+            background-color: #25B33f;
+            margin: 0px;
+        }
+        #header h1{
+            margin-left: 30px;
+            margin-top: -60px;
+        }
+        TABLE {
+            width: 30%;
+        }
+        #col1 {
+            width: 100%;
+            background: #17db88;
+        }
+
+        #col1 {
+            vertical-align: top;
+            padding: 5px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div id="header">
+        <h1><p align="centre"  style="color:#000000;font-size:60px">
+            <a href="/home">  Goldman Sex </a> </p>
+            </p>
+        </h1>
+        <h1 align="right"><p align="centre"  style="color:#000000;font-size:60px; margin-right: 30px; margin-top: -120px">
+            <a href="/admin_page">  <img src="https://sun9-64.userapi.com/impg/Qk-AiRan_ejXPGUrhwi08eASV6M-8JnaHa4Ndw/X1H08nltgcU.jpg?size=360x360&quality=96&sign=d675066352eb2351f436b793058b304c&type=album"width="70"
+                                         height="70" border="0" > </a> </p>
+            </p>
+        </h1>
+
+    </div>
+
+<table border="">
+    <tr>
+        <th id="col1"> ИНСТРУМЕНТЫ </th>
+    </tr>
+    <tr>
+        <th> <p align="centre"  style="color:#000000; font-size:20px"><a href="/users">Просмотреть список пользователей</a> </p></th>
+    </tr>
+    <tr>
+        <th> <p align="centre"  style="color:#000000; font-size:20px"><a href="/admins">Просмотреть список администраторов</a> </p></th>
+    </tr>
+    <tr>
+        <th> <p align="centre"  style="color:#000000; font-size:20px"><a href="/registration_new_admin">Добавить нового администратора</a> </p></th>
+    </tr>
+    <tr>
+        <th> <p align="centre"  style="color:#000000; font-size:20px"><a href="/admins/add_news">Добавить новость</a> </p></th>
+    </tr>
+    <tr>
+        <th> <p align="centre"  style="color:#000000; font-size:20px"><a href="/admins/investment">Инвестиции</a> </p></th>
+    </tr>
+</table>
+    <div class="container mt-5 mb-5">
+        <p th:text="'Баланс админов:'+${fond_money} + ' рублей'" align="center" style="color:#000000; font-size:35px; margin-top: -375px"></p>
+        <p th:text="'Стоимость фонда:'+${all_money} + ' рублей'" align="center" style="color:#000000; font-size:35px"></p>
+    </div>
+    <form th:action="@{/logout}" method="post">
+        <p align="right" style="margin-top: -150px"><input type="submit" value="Sign Out"/></p>
+    </form>
+</body>
+</html>

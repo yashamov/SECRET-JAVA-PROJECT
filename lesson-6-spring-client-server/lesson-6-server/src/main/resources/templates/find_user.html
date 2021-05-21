@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org">
+
+<head>
+    <title>Hello World!</title>
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8"/>
+
+</head>
+<body style="background-attachment: fixed" topmargin="0">
+
+<h1><p align="center" style="color:#000000; font-size:40px">Регистрация</p></h1>
+<div class="container mt-5 mb-5">
+    <form  action="#" th:action="@{/u}" method="post">"
+        <h1><p align="center" style="color:#000000; font-size:20px">Введите имя</p></h1>
+        <p align="center"><input type="text" name="name"  class="form-control" size="30"><br></p>
+        <p align="center"><input type="submit" value="Submit" size="35"/> <input type="reset" value="Reset"  size="35"/><br><br></p>
+        <p align="center">Уже есть аккаунт? <input type="button" value="найти"></p>
+    </form>
+</div>
+
+</body>
+</html>

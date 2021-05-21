@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
+      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<title>Ренистрация Администраторов</title>
+<head>
+    <meta http-equiv="Content-Type" content="text/html"; charset="UTF-8"/>
+    <style>
+        body { background: url("https://sun9-5.userapi.com/impg/QfnIeISnHipAu-9YFLmcOxzogp5bbo-WMV_4tA/t_QKwT3nzO4.jpg?size=1920x1080&quality=96&sign=3e798fce24fa8b6932394ad11fbf95b0&type=album") no-repeat;
+            -moz-background-size: 100%;
+            -webkit-background-size: 100%;
+            -o-background-size: 100%;
+            background-size: 100%;
+        }
+    </style>
+</head>
+<body>
+
+
+<h1><p align="center" style="color:#000000; font-size:40px">Регистрация</p></h1>
+
+<div class="container mt-5 mb-5">
+    <form  action="#" th:action="@{/registration_new_admin}" method="post">"
+        <h1><p align="center" style="color:#000000; font-size:20px">Введите имя</p></h1>
+        <p align="center"><input type="text" name="name"  class="form-control" size="30"><br></p>
+        <h1><p align="center" style="color:#000000; font-size:20px">Введите фамилию</p></h1>
+        <p align="center"><input type="text" name="surname" class="form-control" size="30"><br></p>
+        <h1><p align="center" style="color:#000000; font-size:20px">Введите логин</p></h1>
+        <p align="center"><input type="text" name="login" class="form-control" size="30"><br></p>
+        <h1><p align="center" style="color:#000000; font-size:20px">Введите пароль</p></h1>
+        <p align="center"><input type="text" name="password" class="form-control" size="30"><br></p>
+        <h1><p align="center" style="color:#000000; font-size:20px">Введите ссылку</p></h1>
+        <p align="center"><input type="text" name="link" size="30" class="form-control"><br></p>
+        <h1><p align="center" style="color:#000000; font-size:20px">Введите должность</p></h1>
+        <p align="center"><input type="text" name="position" class="form-control", size="30">
+        <p align="center"><input type="submit" value="Submit" size="35"/> <input type="reset" value="Reset"  size="35"/><br><br></p>
+
+    </form>
+</div>
+</body>
+</html>
